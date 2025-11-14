@@ -304,5 +304,5 @@ function enqueue_mobile_menu_assets() {
 
 // Add filters and actions
 add_action( 'init', __NAMESPACE__ . '\register_navigation_block_attributes', 100 );
-add_filter( 'render_block', __NAMESPACE__ . '\add_mobile_menu_to_navigation', 10, 2 );
+add_filter( 'render_block_core/navigation', __NAMESPACE__ . '\add_mobile_menu_to_navigation', 10, 2 );
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_mobile_menu_assets' );
